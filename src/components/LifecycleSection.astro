@@ -1,0 +1,57 @@
+---
+// src/components/LifecycleSection.astro
+import LifecycleWheel from './LifecycleWheel.tsx';
+---
+
+<section class="bg-hr-cream py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Roof Lifecycle</span>
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+        Every roof has a story.<br class="hidden sm:block" />
+        <span class="text-hr-teal">Know where yours stands.</span>
+      </h2>
+      <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+        Most roofs last 20–30 years — but what you do along the way matters. Explore the five phases of a roof's life and what smart care looks like at each stage.
+      </p>
+    </div>
+
+    <!-- Wheel (React island) -->
+    <div class="reveal-up" style="transition-delay: 0.15s;">
+      <LifecycleWheel client:visible />
+    </div>
+
+    <!-- Footer note -->
+    <p class="text-center text-xs text-hr-text-muted mt-10 reveal-up" style="transition-delay: 0.25s;">
+      Select a phase on the wheel to explore what care looks like at each stage of your roof's life.
+    </p>
+
+  </div>
+</section>
+
+<style>
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); } },
+      { threshold: 0.1 }
+    ).observe(el);
+  });
+</script>

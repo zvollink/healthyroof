@@ -1,0 +1,46 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300;1,9..40,400&family=Playfair+Display:wght@600;700&display=swap");
+
+/* ─── Tailwind custom tokens ─── */
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+
+  --color-hr-teal:          #1A8A84;
+  --color-hr-teal-light:    #2AA59F;
+  --color-hr-teal-dark:     #126560;
+  --color-hr-yellow:        #D4E233;
+  --color-hr-yellow-dark:   #B8C71E;
+  --color-hr-cream:         #F8F7F2;
+  --color-hr-stone:         #F2F0E8;
+  --color-hr-text-primary:  #1C2B2A;
+  --color-hr-text-secondary:#4A6360;
+  --color-hr-text-muted:    #7A9E9B;
+}
+
+/* ─── DaisyUI theme ─── */
+@plugin "daisyui/theme" {
+  name: "healthyroof";
+  default: true;
+  color-scheme: light;
+
+  --color-primary:          #1A8A84;
+  --color-primary-content:  #FFFFFF;
+  --color-secondary:        #D4E233;
+  --color-secondary-content:#1C2B2A;
+  --color-accent:           #126560;
+  --color-accent-content:   #FFFFFF;
+  --color-neutral:          #1C2B2A;
+  --color-neutral-content:  #FFFFFF;
+  --color-base-100:         #F8F7F2;
+  --color-base-200:         #F2F0E8;
+  --color-base-300:         #E4E1D4;
+  --color-base-content:     #1C2B2A;
+  --color-info:             #2AA59F;
+  --color-success:          #1A8A84;
+  --color-warning:          #D4E233;
+  --color-error:            #C0392B;
+}

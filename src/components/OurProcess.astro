@@ -1,0 +1,225 @@
+---
+// src/components/OurProcess.astro
+---
+
+<section class="bg-hr-stone py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center max-w-2xl mx-auto mb-16 lg:mb-20 reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Our Process</span>
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+        A clear path for your roof,<br class="hidden sm:block" />
+        <span class="text-hr-teal">from first look to long term.</span>
+      </h2>
+      <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+        Every homeowner we work with follows the same thoughtful process — designed to help you understand your options and make confident, well-timed decisions.
+      </p>
+    </div>
+
+    <!-- Steps — desktop: horizontal row; mobile: vertical stack -->
+    <div class="relative">
+
+      <!-- Connecting line (desktop only) -->
+      <div class="hidden lg:block absolute top-[52px] left-0 right-0 h-px bg-hr-stone z-0" aria-hidden="true">
+        <div id="progress-line" class="h-full bg-hr-teal transition-all duration-700 ease-in-out" style="width: 0%"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-6 relative z-10">
+
+        <!-- Step 1 -->
+        <div class="process-step group flex flex-col items-center lg:items-start text-center lg:text-left" data-step="0">
+          <!-- Icon circle -->
+          <div class="step-icon w-[104px] h-[104px] rounded-full border-2 border-hr-stone bg-hr-cream flex items-center justify-center mb-6 transition-all duration-500 shrink-0 shadow-sm">
+            <!-- Magnifying glass -->
+            <svg class="w-9 h-9 text-hr-text-muted step-svg transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />
+            </svg>
+          </div>
+          <div>
+            <p class="step-number text-xs font-semibold uppercase tracking-widest text-hr-text-muted mb-2 transition-colors duration-500">Step 1</p>
+            <h3 class="step-title font-display text-xl font-bold text-hr-text-primary mb-3 transition-colors duration-500 leading-snug">Roof Health Assessment</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">
+              We start with a thoughtful evaluation of your roof's condition, performance, and risk areas. You'll receive clear insight — not pressure.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step group flex flex-col items-center lg:items-start text-center lg:text-left" data-step="1">
+          <div class="step-icon w-[104px] h-[104px] rounded-full border-2 border-hr-stone bg-hr-cream flex items-center justify-center mb-6 transition-all duration-500 shrink-0 shadow-sm">
+            <!-- Clipboard check -->
+            <svg class="w-9 h-9 text-hr-text-muted step-svg transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.5 3.75H6A2.25 2.25 0 003.75 6v13.5A2.25 2.25 0 006 21.75h12A2.25 2.25 0 0020.25 19.5V6A2.25 2.25 0 0018 3.75h-1.5M9 3.75h6M9 3.75a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v.75H9V3.75z" />
+            </svg>
+          </div>
+          <div>
+            <p class="step-number text-xs font-semibold uppercase tracking-widest text-hr-text-muted mb-2 transition-colors duration-500">Step 2</p>
+            <h3 class="step-title font-display text-xl font-bold text-hr-text-primary mb-3 transition-colors duration-500 leading-snug">Clear Options &amp; Guidance</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">
+              Based on what we find, we walk you through practical options — maintenance, targeted repairs, rejuvenation, or replacement when needed.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step group flex flex-col items-center lg:items-start text-center lg:text-left" data-step="2">
+          <div class="step-icon w-[104px] h-[104px] rounded-full border-2 border-hr-stone bg-hr-cream flex items-center justify-center mb-6 transition-all duration-500 shrink-0 shadow-sm">
+            <!-- Calendar -->
+            <svg class="w-9 h-9 text-hr-text-muted step-svg transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+            </svg>
+          </div>
+          <div>
+            <p class="step-number text-xs font-semibold uppercase tracking-widest text-hr-text-muted mb-2 transition-colors duration-500">Step 3</p>
+            <h3 class="step-title font-display text-xl font-bold text-hr-text-primary mb-3 transition-colors duration-500 leading-snug">Smart Planning &amp; Timing</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">
+              Together we map the right next steps and timing for your roof — so you make confident decisions that support your home long term.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step group flex flex-col items-center lg:items-start text-center lg:text-left" data-step="3">
+          <div class="step-icon w-[104px] h-[104px] rounded-full border-2 border-hr-stone bg-hr-cream flex items-center justify-center mb-6 transition-all duration-500 shrink-0 shadow-sm">
+            <!-- Shield / home care -->
+            <svg class="w-9 h-9 text-hr-text-muted step-svg transition-colors duration-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+          </div>
+          <div>
+            <p class="step-number text-xs font-semibold uppercase tracking-widest text-hr-text-muted mb-2 transition-colors duration-500">Step 4</p>
+            <h3 class="step-title font-display text-xl font-bold text-hr-text-primary mb-3 transition-colors duration-500 leading-snug">Long-Term Roof Care</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">
+              Healthy Roof is here for the full life of your roof. From ongoing maintenance to future planning, we help you care for your home year after year.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 text-center reveal-up" style="transition-delay: 0.2s;">
+      <a
+        href="/schedule"
+        class="inline-flex items-center gap-2 bg-hr-teal hover:bg-hr-teal-dark text-white font-semibold text-sm px-7 py-4 rounded-full transition-all duration-200 shadow-md hover:shadow-lg group"
+      >
+        Schedule a Roof Health Assessment
+        <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+        </svg>
+      </a>
+      <p class="mt-3 text-xs text-hr-text-muted">No pressure. No obligation. Just clear answers.</p>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Default step state */
+  .process-step {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .process-step.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Active (lit-up) step */
+  .process-step.active .step-icon {
+    background-color: #1A8A84;
+    border-color: #1A8A84;
+    box-shadow: 0 0 0 6px rgba(26,138,132,0.12);
+  }
+  .process-step.active .step-svg {
+    color: #ffffff;
+  }
+  .process-step.active .step-number {
+    color: #1A8A84;
+  }
+  .process-step.active .step-title {
+    color: #1A8A84;
+  }
+</style>
+
+<script>
+  // ── Reveal header on scroll ──
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); } },
+      { threshold: 0.15 }
+    ).observe(el);
+  });
+
+  // ── Steps: fade in then light up sequentially as section scrolls ──
+  const steps = Array.from(document.querySelectorAll('.process-step'));
+  const progressLine = document.getElementById('progress-line');
+
+  // First: fade each step in as it enters view
+  steps.forEach((step, i) => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          (step as HTMLElement).style.transitionDelay = `${i * 0.1}s`;
+          step.classList.add('visible');
+          obs.unobserve(step);
+        }
+      },
+      { threshold: 0.2 }
+    );
+    obs.observe(step);
+  });
+
+  // Then: light up steps as user scrolls through the section
+  function updateActiveSteps() {
+    const section = steps[0]?.closest('section');
+    if (!section) return;
+
+    const sectionTop = section.getBoundingClientRect().top;
+    const sectionHeight = section.getBoundingClientRect().height;
+    const windowH = window.innerHeight;
+
+    // Progress 0→1 as the section scrolls from entering viewport to leaving
+    const scrollProgress = Math.min(
+      1,
+      Math.max(0, (-sectionTop + windowH * 0.4) / (sectionHeight * 0.7))
+    );
+
+    // Determine how many steps should be active
+    const activeCount = Math.ceil(scrollProgress * steps.length);
+
+    steps.forEach((step, i) => {
+      if (i < activeCount) {
+        step.classList.add('active');
+      } else {
+        step.classList.remove('active');
+      }
+    });
+
+    // Drive the connecting line width
+    if (progressLine) {
+      const linePercent = Math.min(100, (activeCount / steps.length) * 100);
+      progressLine.style.width = `${linePercent}%`;
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveSteps, { passive: true });
+  updateActiveSteps(); // run once on load
+</script>

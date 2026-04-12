@@ -190,15 +190,17 @@ export default function LifecycleWheel() {
             );
           })}
 
-          {/* Center house icon */}
+          {/* Center logo */}
           <g transform={`translate(${CX}, ${CY})`} aria-hidden="true">
             <circle r={INNER_R - 5} fill="white" />
-            {/* Teal roof peak */}
-            <polygon points="-28,-38 0,-62 28,-38" fill="#1B7A78" />
-            {/* Yellow house body */}
-            <rect x="-28" y="-38" width="56" height="52" rx="2" fill="#D4E329" />
-            {/* White arch door */}
-            <path d="M-11,14 A11,13 0 0 1 11,14 L11,26 L-11,26 Z" fill="white" />
+            <image
+              href="/images/hr-logo-turquoise.png"
+              x={-(INNER_R - 5) * 0.5}
+              y={-(INNER_R - 5) * 0.6}
+              width={(INNER_R - 5) * 1.0}
+              height={(INNER_R - 5) * 1.0}
+              preserveAspectRatio="xMidYMid meet"
+            />
           </g>
         </svg>
       </div>
@@ -219,11 +221,7 @@ export default function LifecycleWheel() {
           </div>
         ) : (
           <div className="lc-empty">
-            <svg viewBox="0 0 60 56" width="52" height="52" aria-hidden="true">
-              <polygon points="8,26 30,6 52,26" fill="#1B7A78" />
-              <rect x="8" y="26" width="44" height="30" rx="2" fill="#D4E329" />
-              <path d="M21,56 A9,10 0 0 1 39,56 L39,56 L21,56 Z" fill="white" />
-            </svg>
+            <img src="/images/hr-logo-turquoise.png" alt="HealthyRoof" width="64" height="64" style={{ objectFit: "contain" }} />
             <p>Select a phase to explore the Healthy Roof Lifecycle.</p>
           </div>
         )}
