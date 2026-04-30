@@ -1,0 +1,206 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const whyItMatters = [
+  "Extend roof lifespan significantly",
+  "Reduce unexpected and costly repair bills",
+  "Maintain proper drainage and ventilation",
+  "Identify concerns before they become problems",
+  "Support confident long-term home planning",
+];
+
+const whatItIncludes = [
+  { title: "Debris Removal", desc: "Removing leaves, branches, and buildup from roof surfaces that can trap moisture and accelerate wear." },
+  { title: "Gutter & Drainage Check", desc: "Cleaning and inspecting gutters and drainage paths to ensure water moves away from your home properly." },
+  { title: "Flashing & Vent Inspection", desc: "Checking flashing, vents, and roof penetrations for signs of wear, separation, or potential leaks." },
+  { title: "Shingle Condition Monitoring", desc: "Tracking shingle aging, granule loss, and early signs of deterioration over time." },
+  { title: "Storm Impact Review", desc: "Identifying early signs of storm or wind damage before they lead to larger issues." },
+];
+---
+
+<Layout
+  title="Maintenance Planning — HealthyRoof"
+  description="Routine roof care plays an important role in preserving performance and preventing small issues from becoming costly problems. HealthyRoof helps West Michigan homeowners stay ahead."
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-hr-cream">
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[52%] z-0">
+      <img
+        src="/images/Before and Afters/BeforeAfter01.jpg"
+        alt="Well-maintained West Michigan home"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-hr-cream via-hr-cream/85 to-transparent"></div>
+      <div class="absolute inset-0 bg-hr-text-primary/10"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 w-full py-16 lg:py-20">
+      <div class="max-w-md">
+        <div class="flex items-center gap-3 mb-5 fade-up" style="animation-delay: 0ms;">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Maintenance Planning</span>
+        </div>
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-hr-text-primary leading-[1.05] tracking-tight mb-4 fade-up" style="animation-delay: 80ms;">
+          Stay ahead.<br />
+          <span class="text-hr-teal">Roofs last longer.</span>
+        </h1>
+        <p class="text-base text-hr-text-secondary leading-relaxed mb-7 fade-up" style="animation-delay: 160ms;">
+          Routine care plays an important role in preserving roof performance and preventing small issues from becoming costly problems. We help homeowners plan ahead with confidence.
+        </p>
+        <div class="flex flex-col sm:flex-row items-start gap-3 fade-up" style="animation-delay: 240ms;">
+          <a href="/schedule" class="inline-flex items-center gap-2 bg-hr-teal hover:bg-hr-teal-dark text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg group whitespace-nowrap">
+            Schedule a Roof Health Assessment
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+          </a>
+          <a href="tel:6162851025" class="inline-flex items-center gap-2 text-hr-text-secondary hover:text-hr-teal font-medium text-sm transition-colors duration-200">
+            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+            Call or Text: 616.285.1025
+          </a>
+        </div>
+        <p class="mt-3 text-xs text-hr-text-muted fade-up" style="animation-delay: 300ms;">No pressure. No obligation. Just clear answers.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why Maintenance Matters ── -->
+  <section class="bg-hr-stone py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+        <div class="reveal-up">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-8 bg-hr-teal inline-block shrink-0"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Why Maintenance Matters</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+            Small actions.<br />
+            <span class="text-hr-teal">Big difference.</span>
+          </h2>
+          <p class="text-base text-hr-text-secondary leading-relaxed mb-8">
+            Your roof is constantly exposed to weather, debris, and natural aging. Over time, small concerns — clogged drainage, minor wear, early deterioration — can impact performance if left unaddressed. Proactive care helps homeowners feel confident about the condition of their roof year after year.
+          </p>
+          <ul class="flex flex-col gap-3">
+            {whyItMatters.map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-hr-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-hr-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                </span>
+                <span class="text-sm font-medium text-hr-text-secondary">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="relative reveal-up" style="transition-delay: 0.1s;">
+          <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img
+              src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105810_0082_1758329182377_photo.JPG"
+              alt="West Michigan neighborhood — homes we maintain"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="absolute -bottom-5 -left-4 lg:-left-8 bg-white rounded-xl shadow-lg px-5 py-4 max-w-[210px]">
+            <p class="text-2xl font-display font-bold text-hr-text-primary leading-none mb-1">Plan ahead.</p>
+            <p class="text-xs font-medium text-hr-text-muted leading-snug">Maintenance today prevents costly surprises tomorrow</p>
+          </div>
+          <div class="absolute -z-10 -bottom-6 -right-6 w-36 h-36 dot-grid opacity-25" aria-hidden="true"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What Maintenance Includes ── -->
+  <section class="bg-hr-cream py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What Maintenance Includes</span>
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+          Thoughtful care<br />
+          <span class="text-hr-teal">at every stage.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+          Maintenance needs vary depending on roof age and condition. Here's what we typically address.
+        </p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal-up" style="transition-delay: 0.1s;">
+        {whatItIncludes.map((item) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <span class="w-2 h-2 rounded-full bg-hr-teal inline-block mb-4"></span>
+            <h3 class="font-display text-lg font-bold text-hr-text-primary mb-2">{item.title}</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Long-Term Approach ── -->
+  <section class="bg-hr-stone py-20 lg:py-28">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">A Long-Term Approach</span>
+        <span class="h-px w-8 bg-hr-teal inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+        Here for the full life<br />
+        <span class="text-hr-teal">of your roof.</span>
+      </h2>
+      <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed max-w-2xl mx-auto mb-8">
+        Healthy Roof believes roofing decisions should be made at the right time — not too early and not too late. Through periodic Roof Health Assessments and ongoing maintenance guidance, we help homeowners plan ahead, prioritize improvements, and avoid unnecessary stress.
+      </p>
+      <p class="text-base text-hr-text-secondary leading-relaxed max-w-2xl mx-auto">
+        Maintenance today can help support smarter decisions about repairs, rejuvenation, or replacement in the future.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="py-20 lg:py-24 overflow-hidden relative">
+    <div class="absolute inset-0" aria-hidden="true">
+      <img src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105910_0085_1758329181586_photo.JPG" alt="" class="w-full h-full object-cover object-center" />
+      <div class="absolute inset-0 bg-hr-teal-dark/90"></div>
+    </div>
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-yellow">Stay Ahead of Roofing Problems</span>
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-4">
+        Start with a Roof Health Assessment.
+      </h2>
+      <p class="text-base text-white/65 leading-relaxed mb-8 max-w-xl mx-auto">
+        Understanding your roof's current condition is the first step toward effective long-term maintenance and confident home planning.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a href="/schedule" class="inline-flex items-center gap-2 bg-hr-yellow hover:bg-hr-yellow-dark text-hr-text-primary font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg group whitespace-nowrap">
+          Schedule Roof Health Assessment
+          <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" /></svg>
+        </a>
+        <a href="tel:6162851025" class="inline-flex items-center gap-2 border border-white/30 hover:border-hr-yellow text-white hover:text-hr-yellow font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200 whitespace-nowrap">
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" /></svg>
+          616.285.1025
+        </a>
+      </div>
+      <p class="mt-5 text-xs text-white/40">No pressure. No obligation. Just clear insight.</p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .fade-up { opacity: 0; transform: translateY(16px); animation: fadeUp 0.55s ease forwards; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+  .reveal-up { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal-up.visible { opacity: 1; transform: translateY(0); }
+  .dot-grid { background-image: radial-gradient(circle, #1A8A84 1px, transparent 1px); background-size: 18px 18px; }
+</style>
+
+<script>
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(([entry]) => { if (entry.isIntersecting) el.classList.add('visible'); }, { threshold: 0.12 }).observe(el);
+  });
+</script>

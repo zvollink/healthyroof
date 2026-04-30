@@ -1,0 +1,386 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const whatWeEvaluate = [
+  "Roof surface condition and aging",
+  "Attic, insulation, and ventilation",
+  "Flashing, vents, and penetrations",
+  "Gutters and water drainage paths",
+  "Chimney condition and surrounding areas",
+  "Structural elements related to roof performance",
+  "Signs of moisture intrusion or water risk",
+];
+
+const whatYouReceive = [
+  "A detailed photo-based report",
+  "Drone and thermal imagery when needed",
+  "Clear explanations of findings",
+  "A guided walkthrough of your roof's condition",
+  "Practical recommendations tailored to your home",
+];
+
+const outcomes = [
+  "What condition your roof is in",
+  "What issues (if any) need attention",
+  "What can wait — and what shouldn't",
+  "What your options are",
+  "How to plan your next steps",
+];
+---
+
+<Layout
+  title="Roof Health Assessment — HealthyRoof"
+  description="Our Roof Health Assessment goes beyond a basic inspection to evaluate how your entire roof system is functioning — so you can make clear, confident decisions about your home."
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-hr-cream">
+
+    <!-- Right image panel -->
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[52%] z-0">
+      <img
+        src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105544_0075_1758329184688_photo.JPG"
+        alt="HealthyRoof crew replacing a roof — West Michigan"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-hr-cream via-hr-cream/85 to-transparent"></div>
+      <div class="absolute inset-0 bg-hr-text-primary/10"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 w-full py-16 lg:py-20">
+      <div class="max-w-md">
+
+        <div class="flex items-center gap-3 mb-5 fade-up" style="animation-delay: 0ms;">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Roof Health Assessment</span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-hr-text-primary leading-[1.05] tracking-tight mb-4 fade-up" style="animation-delay: 80ms;">
+          See the full picture<br />
+          <span class="text-hr-teal">of your roof.</span>
+        </h1>
+
+        <p class="text-base text-hr-text-secondary leading-relaxed mb-7 fade-up" style="animation-delay: 160ms;">
+          Our Roof Health Assessment goes beyond a basic inspection to evaluate how your entire roof system is functioning — so you can make clear, confident decisions about your home.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start gap-3 fade-up" style="animation-delay: 240ms;">
+          <a
+            href="/schedule"
+            class="inline-flex items-center gap-2 bg-hr-teal hover:bg-hr-teal-dark text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg group whitespace-nowrap"
+          >
+            Schedule a Roof Health Assessment
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="tel:6162851025"
+            class="inline-flex items-center gap-2 text-hr-text-secondary hover:text-hr-teal font-medium text-sm transition-colors duration-200"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            Call or Text: 616.285.1025
+          </a>
+        </div>
+
+        <p class="mt-3 text-xs text-hr-text-muted fade-up" style="animation-delay: 300ms;">
+          No pressure. No obligation. Just clear answers.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What Makes This Different ── -->
+  <section class="bg-hr-stone py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+
+        <!-- Left: copy -->
+        <div class="reveal-up">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-8 bg-hr-teal inline-block shrink-0"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What Makes This Different</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+            Beyond the surface.<br />
+            <span class="text-hr-teal">The whole system.</span>
+          </h2>
+          <div class="space-y-4 text-hr-text-secondary leading-relaxed">
+            <p class="text-base sm:text-lg">
+              Most roofing inspections focus on what's visible from the surface. We take a more complete approach.
+            </p>
+            <p class="text-base sm:text-lg">
+              Healthy Roof evaluates your roof as a system — where shingles, ventilation, insulation, drainage, and structural components all work together.
+            </p>
+            <p class="text-base sm:text-lg font-medium text-hr-text-primary">
+              Because in many cases, the real issue isn't just the roof — it's how the system is performing as a whole.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: visual stat cards -->
+        <div class="relative reveal-up" style="transition-delay: 0.1s;">
+          <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img
+              src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105910_0085_1758329181586_photo.JPG"
+              alt="West Michigan neighborhood aerial view"
+              class="w-full h-full object-cover object-center"
+            />
+            <div class="absolute inset-0 bg-hr-teal/10"></div>
+          </div>
+          <!-- Floating card -->
+          <div class="absolute -bottom-5 -left-4 lg:-left-8 bg-white rounded-xl shadow-lg px-5 py-4 max-w-[210px]">
+            <p class="text-2xl font-display font-bold text-hr-text-primary leading-none mb-1">System-first</p>
+            <p class="text-xs font-medium text-hr-text-muted leading-snug">We evaluate the full roof system, not just the shingles</p>
+          </div>
+          <div class="absolute -z-10 -bottom-6 -right-6 w-36 h-36 dot-grid opacity-25" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What We Evaluate ── -->
+  <section class="bg-hr-cream py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What We Evaluate</span>
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+          A thorough look at<br />
+          <span class="text-hr-teal">everything that matters.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+          Water is one of the biggest threats to a home — so we pay close attention to how it moves across and away from your roof.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 reveal-up" style="transition-delay: 0.1s;">
+        {whatWeEvaluate.map((item, i) => (
+          <div
+            class="bg-white rounded-2xl p-5 flex items-start gap-4 shadow-sm hover:shadow-md transition-shadow duration-200"
+            style={`transition-delay: ${i * 60}ms`}
+          >
+            <span class="w-2 h-2 rounded-full bg-hr-teal shrink-0 mt-1.5"></span>
+            <p class="text-sm font-medium text-hr-text-secondary leading-snug">{item}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── What You Receive + How We Guide You ── -->
+  <section class="bg-hr-stone py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20">
+
+        <!-- What You Receive -->
+        <div class="reveal-up">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-8 bg-hr-teal inline-block shrink-0"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What You Receive</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+            Clarity you can<br />act on.
+          </h2>
+          <p class="text-base text-hr-text-secondary leading-relaxed mb-8">
+            You'll receive a clear, visual understanding of your roof's condition. Reports can be delivered digitally or in print, depending on your preference.
+          </p>
+          <ul class="flex flex-col gap-3">
+            {whatYouReceive.map((item) => (
+              <li class="flex items-start gap-3">
+                <span class="w-5 h-5 rounded-full bg-hr-teal/10 flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-hr-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                </span>
+                <span class="text-sm font-medium text-hr-text-secondary">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- How We Guide You -->
+        <div class="reveal-up" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-8 bg-hr-teal inline-block shrink-0"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">How We Guide You</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+            Educators, not<br />salespeople.
+          </h2>
+          <div class="space-y-4 text-hr-text-secondary leading-relaxed text-base">
+            <p>
+              We approach every assessment as educators — not salespeople. We take time to walk you through what we see, explain what it means, and answer your questions clearly.
+            </p>
+            <p>
+              When needed, we use visual presentations to help you fully understand your options.
+            </p>
+          </div>
+          <!-- Pull quote -->
+          <div class="mt-8 pl-5 border-l-2 border-hr-teal">
+            <p class="font-display text-lg font-bold text-hr-text-primary leading-snug">
+              "Our goal is simple: help you feel confident about what to do next."
+            </p>
+          </div>
+          <!-- Tech callout -->
+          <div class="mt-8 bg-white rounded-2xl p-5 flex items-start gap-4 shadow-sm">
+            <div class="w-10 h-10 rounded-full bg-hr-teal/10 flex items-center justify-center shrink-0">
+              <svg class="w-5 h-5 text-hr-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z" />
+              </svg>
+            </div>
+            <div>
+              <p class="text-sm font-semibold text-hr-text-primary mb-0.5">Drone & Thermal Imaging</p>
+              <p class="text-xs text-hr-text-muted leading-relaxed">We use drone and thermal imaging technology to give you the full picture — catching what can't be seen from the ground.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── The Outcome ── -->
+  <section class="bg-hr-cream py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-24 items-center">
+
+        <!-- Left: outcomes list -->
+        <div class="reveal-up">
+          <div class="flex items-center gap-3 mb-5">
+            <span class="h-px w-8 bg-hr-teal inline-block shrink-0"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">The Outcome</span>
+          </div>
+          <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+            No guesswork.<br />
+            <span class="text-hr-teal">Just clarity.</span>
+          </h2>
+          <p class="text-base text-hr-text-secondary leading-relaxed mb-8">
+            After your assessment, you'll understand exactly where your roof stands and what your options are.
+          </p>
+          <ul class="flex flex-col gap-4">
+            {outcomes.map((item, i) => (
+              <li class="flex items-start gap-4">
+                <span class="font-display text-2xl font-bold text-hr-teal/25 leading-none shrink-0 w-6 text-right">
+                  {String(i + 1).padStart(2, '0')}
+                </span>
+                <span class="text-base font-medium text-hr-text-secondary leading-snug pt-0.5">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Right: image -->
+        <div class="relative reveal-up" style="transition-delay: 0.1s;">
+          <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+            <img
+              src="/images/Before and Afters/sutton2025_01after.jpg"
+              alt="Completed roof replacement — West Michigan"
+              class="w-full h-full object-cover object-center"
+            />
+          </div>
+          <div class="absolute -top-5 -right-4 lg:-right-8 bg-hr-teal text-white rounded-xl shadow-lg px-5 py-4 max-w-[180px]">
+            <p class="text-2xl font-display font-bold leading-none mb-1">Plan with confidence.</p>
+            <p class="text-xs font-medium text-white/75 leading-snug">Know your roof. Plan your home.</p>
+          </div>
+          <div class="absolute -z-10 -bottom-6 -left-6 w-36 h-36 dot-grid opacity-25" aria-hidden="true"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="py-20 lg:py-24 overflow-hidden relative">
+    <div class="absolute inset-0" aria-hidden="true">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/67a26190d73f0f1126aa1024/97c792b9-6d62-4b78-9f6d-b1f9be51ca70/OC_TDSDP_StormCloud_intro_beautyshot_tif+%281%29.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-hr-teal-dark/90"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-yellow">Get Started</span>
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-4">
+        Start with a Roof Health Assessment.
+      </h2>
+      <p class="text-base text-white/65 leading-relaxed mb-8 max-w-xl mx-auto">
+        Get a clear understanding of your roof and a practical plan for what comes next. Call or text to schedule a convenient time.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a
+          href="/schedule"
+          class="inline-flex items-center gap-2 bg-hr-yellow hover:bg-hr-yellow-dark text-hr-text-primary font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl group whitespace-nowrap"
+        >
+          Schedule Roof Health Assessment
+          <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a
+          href="tel:6162851025"
+          class="inline-flex items-center gap-2 border border-white/30 hover:border-hr-yellow text-white hover:text-hr-yellow font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200 whitespace-nowrap"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          616.285.1025
+        </a>
+      </div>
+      <p class="mt-5 text-xs text-white/40">No pressure. No obligation. Just clear answers.</p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.55s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, #1A8A84 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); } },
+      { threshold: 0.12 }
+    ).observe(el);
+  });
+</script>

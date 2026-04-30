@@ -8,6 +8,7 @@
 @theme {
   --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Playfair Display", Georgia, serif;
+  --font-futura: "Futura", "Century Gothic", "Trebuchet MS", ui-sans-serif, sans-serif;
 
   --color-hr-teal:          #1A8A84;
   --color-hr-teal-light:    #2AA59F;

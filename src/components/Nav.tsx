@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
 const navLinks = [
-  { label: "Home", href: "/" },
   { label: "Roof Health Assessment", href: "/roof-health-assessment" },
   {
     label: "Services",
@@ -105,7 +104,7 @@ export default function Nav({ currentPath = "/" }: { currentPath?: string }) {
               className="h-9 w-auto"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-display text-lg font-bold text-hr-teal tracking-tight">
+              <span className="font-futura text-lg font-bold text-hr-teal tracking-tight">
                 HealthyRoof
               </span>
               <span className="text-[10px] font-medium text-hr-text-muted tracking-widest uppercase">
