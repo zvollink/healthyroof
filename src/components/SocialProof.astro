@@ -134,13 +134,13 @@ const credentials = [
 
     <!-- Credentials bar -->
     <div class="reveal-up" style="transition-delay: 0.2s;">
-      <div class="bg-white rounded-2xl px-8 py-8 shadow-sm">
-        <p class="text-center text-xs font-semibold uppercase tracking-widest text-hr-text-muted mb-7">Our Credentials</p>
+      <div class="bg-hr-teal rounded-2xl px-8 py-8 shadow-md">
+        <p class="text-center text-xs font-semibold uppercase tracking-widest text-hr-yellow mb-7">Our Credentials</p>
         <div class="flex flex-wrap justify-center gap-x-8 gap-y-5">
           {credentials.map((c) => (
             <div class="flex items-center gap-2">
               <span class="w-2 h-2 rounded-full bg-hr-yellow shrink-0"></span>
-              <span class="text-sm font-medium text-hr-text-secondary">{c.label}</span>
+              <span class="text-sm font-medium text-white/85">{c.label}</span>
             </div>
           ))}
         </div>

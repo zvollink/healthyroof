@@ -281,30 +281,30 @@ const values = [
   </section>
 
   <!-- ── Our Values ── -->
-  <section class="bg-hr-cream py-20 lg:py-24">
+  <section class="bg-hr-teal py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
         <div class="flex items-center justify-center gap-3 mb-5">
-          <span class="h-px w-8 bg-hr-teal inline-block"></span>
-          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What We Believe</span>
-          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-yellow">What We Believe</span>
+          <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
         </div>
-        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-4">
           How we show up<br />
-          <span class="text-hr-teal">for every homeowner.</span>
+          <span class="text-hr-yellow">for every homeowner.</span>
         </h2>
-        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+        <p class="text-base sm:text-lg text-white/70 leading-relaxed">
           These aren't talking points — they're the principles behind every conversation, every assessment, and every recommendation we make.
         </p>
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-up" style="transition-delay: 0.1s;">
         {values.map((v) => (
-          <div class="bg-hr-stone rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="bg-white/10 border border-white/15 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-200">
             <span class="w-2 h-2 rounded-full bg-hr-yellow inline-block mb-4"></span>
-            <h3 class="font-display text-lg font-bold text-hr-text-primary mb-2">{v.title}</h3>
-            <p class="text-sm text-hr-text-secondary leading-relaxed">{v.desc}</p>
+            <h3 class="font-display text-lg font-bold text-white mb-2">{v.title}</h3>
+            <p class="text-sm text-white/70 leading-relaxed">{v.desc}</p>
           </div>
         ))}
       </div>

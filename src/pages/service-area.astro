@@ -145,20 +145,20 @@ const cities = [
   </section>
 
   <!-- ── Why Local Matters ── -->
-  <section class="bg-hr-cream py-20 lg:py-24">
+  <section class="bg-hr-teal py-20 lg:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
       <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
         <div class="flex items-center justify-center gap-3 mb-5">
-          <span class="h-px w-8 bg-hr-teal inline-block"></span>
-          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Why Local Matters</span>
-          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-yellow">Why Local Matters</span>
+          <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
         </div>
-        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-4">
           We know what West Michigan<br />
-          <span class="text-hr-teal">weather does to roofs.</span>
+          <span class="text-hr-yellow">weather does to roofs.</span>
         </h2>
-        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+        <p class="text-base sm:text-lg text-white/70 leading-relaxed">
           Freeze-thaw cycles, heavy snow loads, ice dams, high winds, and humidity — West Michigan puts roofs through a lot. Knowing the local conditions means we catch the right things, at the right time.
         </p>
       </div>
@@ -190,10 +190,10 @@ const cities = [
             desc: "Michigan's seasons accelerate shingle drying and granule loss — making timely rejuvenation or replacement critical.",
           },
         ].map((card) => (
-          <div class="bg-hr-stone rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+          <div class="bg-white/10 border border-white/15 rounded-2xl p-6 hover:bg-white/15 transition-colors duration-200">
             <span class="w-2 h-2 rounded-full bg-hr-yellow inline-block mb-4"></span>
-            <h3 class="font-display text-lg font-bold text-hr-text-primary mb-2">{card.title}</h3>
-            <p class="text-sm text-hr-text-secondary leading-relaxed">{card.desc}</p>
+            <h3 class="font-display text-lg font-bold text-white mb-2">{card.title}</h3>
+            <p class="text-sm text-white/70 leading-relaxed">{card.desc}</p>
           </div>
         ))}
       </div>
