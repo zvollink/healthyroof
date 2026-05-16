@@ -1,0 +1,383 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const steps = [
+  {
+    number: "01",
+    label: "Step 1",
+    title: "Roof Health Assessment",
+    intro: "Every relationship starts here.",
+    body: [
+      "Before we recommend anything, we get a complete picture of where your roof stands. That means evaluating the full system — shingles, ventilation, insulation, drainage, flashing, and more.",
+      "We use drone and thermal imaging when needed to see what the naked eye can't catch from the ground.",
+    ],
+    detail: "You'll receive a clear, photo-based report of our findings — written for homeowners, not contractors.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 1 1 5 11a6 6 0 0 1 12 0z" />`,
+    href: "/roof-health-assessment",
+    linkLabel: "Learn about the assessment",
+    image: "/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105544_0075_1758329184688_photo.JPG",
+    imageAlt: "HealthyRoof aerial drone view of West Michigan neighborhood rooftops",
+  },
+  {
+    number: "02",
+    label: "Step 2",
+    title: "Clear Options & Guidance",
+    intro: "Straight talk about what we found.",
+    body: [
+      "Once we understand your roof's condition, we walk you through exactly what we see — no jargon, no pressure, no upselling. We explain what the issues mean, what's urgent, what can wait, and what your real options are.",
+      "We take a whole-system perspective: sometimes the issue isn't the shingles at all — it's ventilation, drainage, or something structural.",
+    ],
+    detail: "Our job is to educate, not to sell. You'll leave this conversation knowing what's going on and feeling confident about your choices.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.5 3.75H6A2.25 2.25 0 003.75 6v13.5A2.25 2.25 0 006 21.75h12A2.25 2.25 0 0020.25 19.5V6A2.25 2.25 0 0018 3.75h-1.5M9 3.75h6M9 3.75a.75.75 0 01.75-.75h4.5a.75.75 0 01.75.75v.75H9V3.75z" />`,
+    href: null,
+    linkLabel: null,
+    image: "/images/Headshot Chris photo.jpg",
+    imageAlt: "Chris Owen, co-owner of HealthyRoof, explaining a roof assessment",
+  },
+  {
+    number: "03",
+    label: "Step 3",
+    title: "Smart Planning & Timing",
+    intro: "The right move, at the right time.",
+    body: [
+      "Not every roof problem needs to be solved today. Together, we map out a practical plan based on your roof's condition, your budget, and your timeline — whether that's a repair this season, a rejuvenation treatment in the fall, or a replacement planned two years out.",
+      "We help you avoid both the trap of acting too soon and the risk of waiting too long.",
+    ],
+    detail: "Good timing is one of the most valuable things we offer. We'll tell you honestly when it's smart to wait.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />`,
+    href: "/services/maintenance-planning",
+    linkLabel: "See Maintenance Planning",
+    image: "/images/Before and Afters/sutton2025_01after.jpg",
+    imageAlt: "Completed roof replacement — West Michigan home",
+  },
+  {
+    number: "04",
+    label: "Step 4",
+    title: "Long-Term Roof Care",
+    intro: "We're here for the long haul.",
+    body: [
+      "A healthy roof isn't a one-time project — it's an ongoing relationship. Once we've worked together, we stay in your corner. Whether it's a seasonal check, a question after a storm, or planning for what's next, you'll always have someone to call.",
+      "We keep records of your roof's history so we can give you context and continuity, not just a one-off service call.",
+    ],
+    detail: "Most of our clients come back to us — not because they have to, but because they trust us to keep giving them straight answers.",
+    icon: `<path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />`,
+    href: null,
+    linkLabel: null,
+    image: "/images/Truck shots/27-Apr 15 2026 02_50pm-AZNi.jpg",
+    imageAlt: "HealthyRoof truck — Grand Rapids, Michigan",
+  },
+];
+---
+
+<Layout
+  title="Our Process — HealthyRoof"
+  description="HealthyRoof's 4-step process puts education first: Roof Health Assessment, clear options, smart planning, and long-term care. No pressure, just straight answers."
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative min-h-[60vh] flex items-center overflow-hidden bg-hr-cream">
+
+    <div class="absolute inset-y-0 right-0 w-full lg:w-[52%] z-0">
+      <img
+        src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_110048_0087_1758329180936_photo.JPG"
+        alt="Aerial view of West Michigan neighborhood — HealthyRoof service area"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-y-0 left-0 w-2/3 bg-gradient-to-r from-hr-cream via-hr-cream/85 to-transparent"></div>
+      <div class="absolute inset-0 bg-hr-text-primary/10"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 w-full py-16 lg:py-20">
+      <div class="max-w-md">
+
+        <div class="flex items-center gap-3 mb-5 fade-up" style="animation-delay: 0ms;">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Our Process</span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-hr-text-primary leading-[1.05] tracking-tight mb-4 fade-up" style="animation-delay: 80ms;">
+          A clear path<br />
+          <span class="text-hr-teal">for your roof.</span>
+        </h1>
+
+        <p class="text-base text-hr-text-secondary leading-relaxed mb-7 fade-up" style="animation-delay: 160ms;">
+          Every homeowner we work with follows the same thoughtful process — built around education, honest guidance, and decisions that make sense for the long term.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-start gap-3 fade-up" style="animation-delay: 240ms;">
+          <a
+            href="/schedule"
+            class="inline-flex items-center gap-2 bg-hr-teal hover:bg-hr-teal-dark text-white font-semibold text-sm px-6 py-3.5 rounded-full transition-all duration-200 shadow-md hover:shadow-lg group whitespace-nowrap"
+          >
+            Schedule a Roof Health Assessment
+            <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+          <a
+            href="tel:6162851025"
+            class="inline-flex items-center gap-2 text-hr-text-secondary hover:text-hr-teal font-medium text-sm transition-colors duration-200"
+          >
+            <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+            </svg>
+            Call or Text: 616.285.1025
+          </a>
+        </div>
+
+        <p class="mt-3 text-xs text-hr-text-muted fade-up" style="animation-delay: 300ms;">
+          No pressure. No obligation. Just clear answers.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Intro / Philosophy ── -->
+  <section class="bg-hr-stone py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center reveal-up">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">How We Work</span>
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-6">
+          Built around education,<br />
+          <span class="text-hr-teal">not sales.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed mb-4">
+          Most roofing companies are optimized for one thing: closing a job. We're built differently. Our process is designed to give you a complete, honest understanding of your roof — so that any decision you make is well-timed and well-informed.
+        </p>
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+          We'll tell you when it's smart to wait. We'll tell you when something can't wait. And we'll always explain why.
+        </p>
+      </div>
+
+      <!-- Credential pills -->
+      <div class="mt-12 flex flex-wrap justify-center gap-3 reveal-up" style="transition-delay: 0.1s;">
+        {[
+          "Locally Owned",
+          "Fully Insured",
+          "Certified Home Inspectors",
+          "Drone Certified",
+          "IICRC Mold Specialist",
+          "Licensed Builders",
+          "BBB Certified",
+        ].map((cred) => (
+          <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-hr-teal bg-white border border-hr-teal/20 px-3.5 py-1.5 rounded-full shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-hr-yellow shrink-0"></span>
+            {cred}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Step-by-Step Sections ── -->
+  {steps.map((step, i) => (
+    <section class={`py-20 lg:py-28 overflow-hidden ${i % 2 === 0 ? 'bg-hr-cream' : 'bg-hr-stone'}`}>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class={`grid lg:grid-cols-2 gap-14 lg:gap-24 items-center ${i % 2 === 1 ? 'lg:[&>*:first-child]:order-2' : ''}`}>
+
+          <!-- Content -->
+          <div class="reveal-up">
+            <!-- Step badge -->
+            <div class="flex items-center gap-3 mb-6">
+              <span class="font-display text-5xl font-bold text-hr-teal/15 leading-none">{step.number}</span>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-hr-teal">{step.label}</p>
+              </div>
+            </div>
+
+            <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-3">
+              {step.title}
+            </h2>
+            <p class="text-base font-medium text-hr-teal mb-6">{step.intro}</p>
+
+            <div class="space-y-4 text-hr-text-secondary leading-relaxed text-base mb-6">
+              {step.body.map((para) => (
+                <p>{para}</p>
+              ))}
+            </div>
+
+            <!-- Highlighted detail -->
+            <div class="bg-white rounded-2xl px-5 py-4 border-l-4 border-hr-teal shadow-sm mb-6">
+              <p class="text-sm font-medium text-hr-text-secondary leading-relaxed">{step.detail}</p>
+            </div>
+
+            {step.href && (
+              <a
+                href={step.href}
+                class="inline-flex items-center gap-2 text-hr-teal hover:text-hr-teal-dark font-semibold text-sm transition-colors duration-200 group"
+              >
+                {step.linkLabel}
+                <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+            )}
+          </div>
+
+          <!-- Image -->
+          <div class="relative reveal-up" style="transition-delay: 0.1s;">
+            <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3]">
+              <img
+                src={step.image}
+                alt={step.imageAlt}
+                class="w-full h-full object-cover object-center"
+              />
+            </div>
+            <!-- Step number watermark -->
+            <div class={`absolute ${i % 2 === 0 ? '-top-5 -right-4 lg:-right-8' : '-top-5 -left-4 lg:-left-8'} bg-hr-teal text-white rounded-xl shadow-lg px-5 py-4`}>
+              <p class="font-display text-3xl font-bold leading-none opacity-90">{step.number}</p>
+              <p class="text-xs font-medium text-white/70 mt-0.5">{step.label}</p>
+            </div>
+            <div class={`absolute -z-10 -bottom-6 ${i % 2 === 0 ? '-left-6' : '-right-6'} w-36 h-36 dot-grid opacity-25`} aria-hidden="true"></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <!-- ── Why It Works ── -->
+  <section class="bg-hr-stone py-20 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center max-w-2xl mx-auto mb-14 reveal-up">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Why It Works</span>
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+        </div>
+        <h2 class="font-display text-4xl sm:text-5xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-4">
+          The difference is<br />
+          <span class="text-hr-teal">the relationship.</span>
+        </h2>
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed">
+          Our process works because it's built around trust — not transaction. When you understand your roof, you make better decisions. When you make better decisions, your roof lasts longer.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 reveal-up" style="transition-delay: 0.1s;">
+        {[
+          {
+            title: "Honest assessments",
+            desc: "We tell you what we see — including when there's nothing to worry about.",
+          },
+          {
+            title: "No upselling",
+            desc: "We recommend only what makes sense for your home and your timing.",
+          },
+          {
+            title: "Educated decisions",
+            desc: "You'll always understand the why behind any recommendation we make.",
+          },
+          {
+            title: "Whole-system thinking",
+            desc: "We evaluate ventilation, drainage, and structure — not just shingles.",
+          },
+          {
+            title: "Long-term continuity",
+            desc: "We keep records of your roof's history so future conversations have context.",
+          },
+          {
+            title: "No-pressure timelines",
+            desc: "We'll tell you when to act and when it's smart to wait. Honestly.",
+          },
+        ].map((card) => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+            <span class="w-2 h-2 rounded-full bg-hr-yellow inline-block mb-4"></span>
+            <h3 class="font-display text-lg font-bold text-hr-text-primary mb-2">{card.title}</h3>
+            <p class="text-sm text-hr-text-secondary leading-relaxed">{card.desc}</p>
+          </div>
+        ))}
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Final CTA ── -->
+  <section class="py-20 lg:py-24 overflow-hidden relative">
+    <div class="absolute inset-0" aria-hidden="true">
+      <img
+        src="https://images.squarespace-cdn.com/content/v1/67a26190d73f0f1126aa1024/97c792b9-6d62-4b78-9f6d-b1f9be51ca70/OC_TDSDP_StormCloud_intro_beautyshot_tif+%281%29.jpg"
+        alt=""
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-hr-teal-dark/90"></div>
+    </div>
+
+    <div class="relative max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-up">
+      <div class="flex items-center justify-center gap-3 mb-5">
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+        <span class="text-xs font-semibold uppercase tracking-widest text-hr-yellow">Get Started</span>
+        <span class="h-px w-8 bg-hr-yellow/50 inline-block"></span>
+      </div>
+      <h2 class="font-display text-4xl sm:text-5xl font-bold text-white leading-[1.1] tracking-tight mb-4">
+        Start with the assessment.
+      </h2>
+      <p class="text-base text-white/65 leading-relaxed mb-8 max-w-xl mx-auto">
+        A Roof Health Assessment is where everything begins. Schedule a convenient time and we'll give you a clear picture of where your roof stands — and what makes sense next.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <a
+          href="/schedule"
+          class="inline-flex items-center gap-2 bg-hr-yellow hover:bg-hr-yellow-dark text-hr-text-primary font-bold text-sm px-7 py-3.5 rounded-full transition-all duration-200 shadow-lg hover:shadow-xl group whitespace-nowrap"
+        >
+          Schedule Roof Health Assessment
+          <svg class="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </a>
+        <a
+          href="tel:6162851025"
+          class="inline-flex items-center gap-2 border border-white/30 hover:border-hr-yellow text-white hover:text-hr-yellow font-semibold text-sm px-7 py-3.5 rounded-full transition-all duration-200 whitespace-nowrap"
+        >
+          <svg class="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+          </svg>
+          616.285.1025
+        </a>
+      </div>
+      <p class="mt-5 text-xs text-white/40">No pressure. No obligation. Just clear answers.</p>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.55s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dot-grid {
+    background-image: radial-gradient(circle, #1A8A84 1px, transparent 1px);
+    background-size: 18px 18px;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); } },
+      { threshold: 0.12 }
+    ).observe(el);
+  });
+</script>
