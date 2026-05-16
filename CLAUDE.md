@@ -25,18 +25,32 @@ Tone: calm clarity, warm professionalism, transparency, long-term thinking.
 ```
 src/
   components/
-    Nav.tsx          # React island, sticky header, Services dropdown, mobile menu
-    Footer.astro     # Static, 4-column layout
-    Hero.astro       # Homepage hero, split layout
-    LifecycleWheel.tsx  # Interactive SVG roof lifecycle diagram (React island)
+    Nav.tsx               # React island, sticky header, Services dropdown, mobile menu
+    Footer.astro          # Static, 4-column layout
+    Hero.astro            # Homepage hero, split layout
+    WhyWeExist.astro      # Homepage section 2 — mission statement
+    OurProcess.astro      # Homepage section 3 — 4 steps, scroll-activated
+    LifecycleSection.astro # Homepage section 4 — wraps LifecycleWheel
+    LifecycleWheel.tsx    # Interactive SVG roof lifecycle diagram (React island)
+    SocialProof.astro     # Homepage section 5 — reviews, before/after, credentials
+    ScheduleCTA.astro     # Homepage section 6 — dark teal CTA, 3-step how it works
   layouts/
-    Layout.astro     # Root layout — imports Nav, Footer, global.css
+    Layout.astro          # Root layout — imports Nav, Footer, global.css
   styles/
-    global.css       # Tailwind v4 @theme config + DaisyUI theme
+    global.css            # Tailwind v4 @theme config + DaisyUI theme
   pages/
-    index.astro      # Homepage
-  assets/
-    images/          # Site images — use Astro <Image /> for optimization
+    index.astro                        # Homepage
+    roof-health-assessment.astro       # /roof-health-assessment
+    about.astro                        # /about
+    our-process.astro                  # /our-process
+    reviews.astro                      # /reviews (hidden from nav until real reviews collected)
+    schedule.astro                     # /schedule — Instant Roofer widget + 3-step how it works
+    service-area.astro                 # /service-area — Google Maps iframe + city grid
+    services/
+      roof-rejuvenation.astro          # /services/roof-rejuvenation
+      roof-repairs.astro               # /services/roof-repairs
+      roof-replacement.astro           # /services/roof-replacement
+      maintenance-planning.astro       # /services/maintenance-planning
 public/
   images/
     hr-logo-turquoise.png   # Primary logo (used in Nav, Hero)
@@ -102,13 +116,32 @@ Service Area
 
 ---
 
-## Homepage Sections (build order)
+## Homepage Sections
 - [x] Hero — split layout, shingle image right, content left, fade-up animations
-- [ ] Section 2 — Why We Exist (mission statement, human/personal)
-- [ ] Section 3 — Our Process (4 steps, scroll-activated, icons)
-- [ ] Section 4 — Roof Lifecycle Wheel (LifecycleWheel.tsx already built)
-- [ ] Section 5 — Social Proof (reviews, before/after, credentials, CTA)
-- [ ] Section 6 — How It Works / Schedule CTA (3-step process)
+- [x] Section 2 — Why We Exist — two-column, floating stat cards, values pills
+- [x] Section 3 — Our Process — 4 steps, scroll-activated icon lighting + progress line
+- [x] Section 4 — Roof Lifecycle Wheel — LifecycleWheel.tsx React island
+- [x] Section 5 — Social Proof — review cards, before/after photos, credentials bar
+- [x] Section 6 — Schedule CTA — dark teal bg, 3-step how-it-works, dual CTA buttons
+
+## Pages Status
+- [x] Home — /
+- [x] Roof Health Assessment — /roof-health-assessment
+- [x] Roof Rejuvenation — /services/roof-rejuvenation
+- [x] Roof Repairs — /services/roof-repairs
+- [x] Roof Replacement — /services/roof-replacement
+- [x] Maintenance Planning — /services/maintenance-planning
+- [x] Our Process — /our-process
+- [x] About — /about
+- [x] Reviews — /reviews (hidden from nav — uncomment in Nav.tsx when real reviews ready)
+- [x] Service Area — /service-area (Google Maps iframe, city grid, West Michigan weather cards)
+- [x] Schedule — /schedule (Instant Roofer widget — pending brand color update from client)
+
+## Pending / Outstanding
+- [ ] Instant Roofer widget colors — send #1A8A84 + #D4E233 to Instant Roofer, swap embed src when received
+- [ ] Real reviews — collect from client, populate reviews.astro + reviews page, then unhide in Nav
+- [ ] Real assets — SVG logo, hi-res photos from client
+- [ ] Color pass — bolder teal/yellow sections per Liz's feedback (do on separate branch)
 
 ---
 
