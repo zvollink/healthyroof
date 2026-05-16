@@ -1,0 +1,231 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+  title="Schedule a Roof Health Assessment — HealthyRoof"
+  description="Schedule your Roof Health Assessment with HealthyRoof. Clear findings, honest guidance, and no pressure — serving Greater Grand Rapids and West Michigan."
+>
+
+  <!-- ── Hero ── -->
+  <section class="relative min-h-[48vh] flex items-center overflow-hidden bg-hr-cream">
+    <div class="absolute inset-0 z-0">
+      <img
+        src="/images/Roof Replacement Drone Neighborhood shots (Thornquist 2025)/dji_fly_20250919_105446_0072_1758329185623_photo.JPG"
+        alt="West Michigan neighborhood — HealthyRoof service area"
+        class="w-full h-full object-cover object-center"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-hr-cream via-hr-cream/85 to-hr-cream/30"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-6 sm:px-10 lg:px-8 w-full py-16 lg:py-24">
+      <div class="max-w-lg">
+
+        <div class="flex items-center gap-3 mb-5 fade-up" style="animation-delay: 0ms;">
+          <span class="h-px w-8 bg-hr-teal inline-block"></span>
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Get Started</span>
+        </div>
+
+        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-hr-text-primary leading-[1.05] tracking-tight mb-5 fade-up" style="animation-delay: 80ms;">
+          Schedule your<br />
+          <span class="text-hr-teal">Roof Health Assessment.</span>
+        </h1>
+
+        <p class="text-base sm:text-lg text-hr-text-secondary leading-relaxed mb-3 fade-up" style="animation-delay: 160ms;">
+          Start with clear insight into your roof's condition — and a practical plan for what comes next. No pressure, no obligation.
+        </p>
+
+        <p class="text-sm text-hr-text-muted fade-up" style="animation-delay: 220ms;">
+          Prefer to call or text?
+          <a href="tel:6162851025" class="text-hr-teal font-semibold hover:text-hr-teal-dark transition-colors">616.285.1025</a>
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Main Content: Widget + What to Expect ── -->
+  <section class="bg-hr-stone py-20 lg:py-28">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
+
+        <!-- Instant Roofer Widget -->
+        <div class="reveal-up">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="h-px w-8 bg-hr-teal inline-block"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">Instant Estimate</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-3">
+            Get an instant quote.
+          </h2>
+          <p class="text-sm text-hr-text-secondary leading-relaxed mb-8">
+            Use the tool below to get a quick estimate for your roof — then we'll follow up to walk you through your options in detail.
+          </p>
+
+          <div class="bg-white rounded-2xl shadow-sm overflow-hidden p-4 border border-hr-teal/10">
+            <iframe
+              src="https://book.instantroofer.com/?product=estimate&id=3c768455-7c50-4221-bdbe-3394491039af&materials=shingleAsphaltArchitect,shingleAsphaltDesigner,foreverRoof"
+              style="display:block;width:100%;height:650px;border:none;"
+              title="Instant Roof Estimate — HealthyRoof"
+              loading="lazy"
+            ></iframe>
+            <p class="text-center text-xs text-hr-text-muted mt-3">
+              Powered by <a href="https://www.instantroofer.com" target="_blank" rel="noopener noreferrer" class="text-hr-teal hover:underline">Instant Roofer</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- What to Expect -->
+        <div class="reveal-up lg:sticky lg:top-28" style="transition-delay: 0.1s;">
+
+          <div class="flex items-center gap-3 mb-6">
+            <span class="h-px w-8 bg-hr-teal inline-block"></span>
+            <span class="text-xs font-semibold uppercase tracking-widest text-hr-teal">What to Expect</span>
+          </div>
+          <h2 class="font-display text-3xl sm:text-4xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-3">
+            Simple. Clear.<br />No pressure.
+          </h2>
+          <p class="text-sm text-hr-text-secondary leading-relaxed mb-10">
+            Here's exactly what happens when you reach out to HealthyRoof.
+          </p>
+
+          <!-- Steps -->
+          <div class="space-y-8 mb-10">
+            {[
+              {
+                number: "01",
+                title: "Reach Out",
+                desc: "Call, text, or use the estimate tool above to schedule your Roof Health Assessment at a time that works for you.",
+              },
+              {
+                number: "02",
+                title: "Thoughtful Assessment",
+                desc: "We evaluate your roof's full system — shingles, ventilation, drainage, flashing, and more — and walk you through what we find using clear visuals and plain language.",
+              },
+              {
+                number: "03",
+                title: "Options & Planning",
+                desc: "You receive honest guidance and realistic options so you can make a confident, well-timed decision. Whether that's maintenance, repair, rejuvenation, or replacement — we'll tell you what makes sense.",
+              },
+            ].map((step) => (
+              <div class="flex gap-5">
+                <div class="shrink-0 w-10 h-10 rounded-full bg-hr-teal/10 border border-hr-teal/20 flex items-center justify-center">
+                  <span class="font-display text-xs font-bold text-hr-teal">{step.number}</span>
+                </div>
+                <div>
+                  <h3 class="font-display text-lg font-bold text-hr-text-primary mb-1">{step.title}</h3>
+                  <p class="text-sm text-hr-text-secondary leading-relaxed">{step.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <!-- Callout -->
+          <div class="bg-white rounded-2xl px-5 py-5 border-l-4 border-hr-teal shadow-sm mb-8">
+            <p class="text-sm font-medium text-hr-text-secondary leading-relaxed">
+              No guesswork. No pressure. Just a clear picture of where your roof stands — and what makes sense next.
+            </p>
+          </div>
+
+          <!-- Direct contact -->
+          <div class="bg-hr-cream rounded-2xl p-5 border border-hr-stone">
+            <p class="text-xs font-semibold uppercase tracking-widest text-hr-teal mb-3">Prefer to talk directly?</p>
+            <a
+              href="tel:6162851025"
+              class="flex items-center gap-3 text-hr-text-primary hover:text-hr-teal transition-colors group mb-2"
+            >
+              <svg class="w-4 h-4 shrink-0 text-hr-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+              </svg>
+              <span class="text-sm font-semibold">Call or Text: 616.285.1025</span>
+            </a>
+            <a
+              href="mailto:info@thehealthyroof.com"
+              class="flex items-center gap-3 text-hr-text-primary hover:text-hr-teal transition-colors group"
+            >
+              <svg class="w-4 h-4 shrink-0 text-hr-teal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+              </svg>
+              <span class="text-sm font-semibold">info@thehealthyroof.com</span>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Reassurance strip ── -->
+  <section class="bg-hr-cream py-12 border-t border-hr-stone">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 text-center sm:text-left reveal-up">
+        {[
+          { label: "No pressure", desc: "We educate, we don't sell." },
+          { label: "No obligation", desc: "The assessment stands on its own." },
+          { label: "Just clear answers", desc: "Plain language, full picture." },
+        ].map((item) => (
+          <div class="flex items-start gap-3">
+            <span class="w-2 h-2 rounded-full bg-hr-yellow mt-1.5 shrink-0"></span>
+            <div>
+              <p class="text-sm font-bold text-hr-text-primary">{item.label}</p>
+              <p class="text-xs text-hr-text-muted">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+</Layout>
+
+<style>
+  .fade-up {
+    opacity: 0;
+    transform: translateY(16px);
+    animation: fadeUp 0.55s ease forwards;
+  }
+  @keyframes fadeUp {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  window.IR_APP_ORIGIN = "https://book.instantroofer.com";
+
+  (function () {
+    let loaded = false;
+    function loadScript() {
+      if (loaded) return;
+      loaded = true;
+      const s = document.createElement("script");
+      s.src = "https://book.instantroofer.com/js/instant-roofer-google-ads-integration.min.js";
+      document.body.appendChild(s);
+    }
+    const timeoutId = setTimeout(loadScript, 7000);
+    window.addEventListener("scroll", function onScroll() {
+      loadScript();
+      clearTimeout(timeoutId);
+      window.removeEventListener("scroll", onScroll);
+    });
+  })();
+</script>
+
+<script>
+  document.querySelectorAll('.reveal-up').forEach((el) => {
+    new IntersectionObserver(
+      ([entry]) => { if (entry.isIntersecting) { el.classList.add('visible'); } },
+      { threshold: 0.12 }
+    ).observe(el);
+  });
+</script>
