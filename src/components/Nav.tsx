@@ -13,7 +13,7 @@ const navLinks = [
     ],
   },
   { label: "Our Process", href: "/our-process" },
-  { label: "About", href: "/about" },
+  { label: "Who We Are", href: "/about" },
   { label: "Reviews", href: "/reviews" },
   { label: "Service Area", href: "/service-area" },
 ];
