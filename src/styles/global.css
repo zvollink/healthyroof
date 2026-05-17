@@ -13,8 +13,8 @@
   --color-hr-teal:          #1A8A84;
   --color-hr-teal-light:    #2AA59F;
   --color-hr-teal-dark:     #126560;
-  --color-hr-yellow:        #D4E233;
-  --color-hr-yellow-dark:   #B8C71E;
+  --color-hr-yellow:        #E7E238;
+  --color-hr-yellow-dark:   #CECE20;
   --color-hr-cream:         #F8F7F2;
   --color-hr-stone:         #F2F0E8;
   --color-hr-text-primary:  #1C2B2A;
@@ -30,7 +30,7 @@
 
   --color-primary:          #1A8A84;
   --color-primary-content:  #FFFFFF;
-  --color-secondary:        #D4E233;
+  --color-secondary:        #E7E238;
   --color-secondary-content:#1C2B2A;
   --color-accent:           #126560;
   --color-accent-content:   #FFFFFF;
@@ -42,6 +42,6 @@
   --color-base-content:     #1C2B2A;
   --color-info:             #2AA59F;
   --color-success:          #1A8A84;
-  --color-warning:          #D4E233;
+  --color-warning:          #E7E238;
   --color-error:            #C0392B;
 }

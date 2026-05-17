@@ -67,8 +67,8 @@ Defined as Tailwind v4 `@theme` tokens in `src/styles/global.css`.
 | `hr-teal` | `#1A8A84` | Primary brand, CTAs, accents |
 | `hr-teal-light` | `#2AA59F` | Hover states, info |
 | `hr-teal-dark` | `#126560` | Hover on buttons, footer bg |
-| `hr-yellow` | `#D4E233` | Accent dots, highlights, footer text |
-| `hr-yellow-dark` | `#B8C71E` | Yellow hover states |
+| `hr-yellow` | `#E7E238` | Accent dots, highlights, footer text |
+| `hr-yellow-dark` | `#CECE20` | Yellow hover states |
 | `hr-cream` | `#F8F7F2` | Page background |
 | `hr-stone` | `#F2F0E8` | Section backgrounds, borders |
 | `hr-text-primary` | `#1C2B2A` | Main body text |
