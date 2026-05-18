@@ -104,11 +104,11 @@ export default function Nav({ currentPath = "/" }: { currentPath?: string }) {
               className="h-9 w-auto"
             />
             <div className="flex flex-col leading-none">
-              <span className="font-futura text-lg font-bold text-hr-teal tracking-tight">
+              <span className="font-futura text-lg font-semibold text-hr-teal tracking-tight">
                 HealthyRoof
               </span>
-              <span className="text-[10px] font-medium text-hr-text-muted tracking-widest uppercase">
-                Here, roofs last longer
+              <span className="font-futura text-[10px] font-semibold text-hr-text-muted tracking-widest">
+                Here, roofs last longer.
               </span>
             </div>
           </a>

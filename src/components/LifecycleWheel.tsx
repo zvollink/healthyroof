@@ -18,10 +18,10 @@ const phases: Phase[] = [
     color: "#B8DDD9",
     activeColor: "#9ACFCA",
     bullets: [
-      "Roof is performing at its best.",
+      "Roof is performing at its best — early care matters.",
       "Register and understand warranty coverage",
-      "Confirm proper drainage and attic ventilation",
-      "Establish baseline roof condition",
+      "Confirm proper drainage and ventilation",
+      "Establish a baseline condition",
     ],
     tagline: "Early awareness protects long-term roof performance.",
   },
@@ -32,10 +32,10 @@ const phases: Phase[] = [
     color: "#7FCCC8",
     activeColor: "#5EBFBB",
     bullets: [
-      "Notice early signs of aging or storm impact.",
-      "Clean gutters and remove roof debris",
-      "Watch for staining, moss, or damaged shingles",
-      "Inspect roof condition after major storms",
+      "Early signs of wear begin to appear.",
+      "Keep gutters clear and roof clean",
+      "Watch for staining, moss, or shingle wear",
+      "Check after major storms",
     ],
     tagline: "Routine care helps slow roof aging.",
   },
@@ -46,38 +46,38 @@ const phases: Phase[] = [
     color: "#4FAFAB",
     activeColor: "#3A9E9A",
     bullets: [
-      "Preventive professional care becomes important.",
+      "Preventive care becomes more important.",
       "Schedule periodic roof health assessments",
       "Address minor repairs early",
-      "Maintain flashing, seals, and drainage points",
+      "Maintain flashing, seals, and drainage",
     ],
     tagline: "Small actions help protect the longevity of the roof.",
   },
   {
     id: 4,
-    name: "Extend & Restore",
+    name: "Restore & Extend",
     years: "Midlife",
     color: "#2A9490",
     activeColor: "#1F7E7A",
     bullets: [
-      "Roof aging accelerates, but proactive options exist.",
-      "Consider rejuvenation as shingles begin to lose flexibility",
-      "Restore weather resistance and performance consistency",
-      "Extend functional roof service life",
+      "Aging increases, but options still exist.",
+      "Consider rejuvenation as shingles lose flexibility",
+      "Improve performance and weather resistance",
+      "Extend functional roof life",
     ],
     tagline: "Strategic maintenance may help delay replacement.",
   },
   {
     id: 5,
-    name: "Plan & Review",
+    name: "Plan Ahead",
     years: "Later Years",
     color: "#1B7A78",
     activeColor: "#125F5D",
     bullets: [
-      "Closer evaluation supports confident decisions.",
-      "Monitor roof performance closely in later years",
-      "Plan replacement timing before failure occurs",
-      "Prepare for the next roofing lifecycle",
+      "Clear planning prevents costly surprises.",
+      "Monitor more frequently",
+      "Plan replacement before failure",
+      "Prepare for the next roofing cycle",
     ],
     tagline: "Proactive planning protects the home and reduces stress.",
   },
@@ -300,7 +300,7 @@ export default function LifecycleWheel() {
           align-items: center;
           justify-content: center;
           text-align: center;
-          color: #9ACFCA;
+          color: #148888;
           gap: 16px;
           font-size: 15px;
           width: 100%;

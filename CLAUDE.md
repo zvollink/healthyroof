@@ -64,10 +64,10 @@ Defined as Tailwind v4 `@theme` tokens in `src/styles/global.css`.
 
 | Token | Hex | Usage |
 |---|---|---|
-| `hr-teal` | `#1A8A84` | Primary brand, CTAs, accents |
-| `hr-teal-light` | `#2AA59F` | Hover states, info |
-| `hr-teal-dark` | `#126560` | Hover on buttons, footer bg |
-| `hr-yellow` | `#E7E238` | Accent dots, highlights, footer text |
+| `hr-teal` | `#148888` | Primary brand, CTAs, accents |
+| `hr-teal-light` | `#1AA0A0` | Hover states, info |
+| `hr-teal-dark` | `#0E6464` | Hover on buttons, footer bg |
+| `hr-yellow` | `#E7E339` | Accent dots, highlights, footer text |
 | `hr-yellow-dark` | `#CECE20` | Yellow hover states |
 | `hr-cream` | `#F8F7F2` | Page background |
 | `hr-stone` | `#F2F0E8` | Section backgrounds, borders |
