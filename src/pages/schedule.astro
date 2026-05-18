@@ -60,16 +60,52 @@ import Layout from '../layouts/Layout.astro';
             Use the tool below to get a quick estimate for your roof — then we'll follow up to walk you through your options in detail.
           </p>
 
-          <div class="bg-white rounded-2xl shadow-sm overflow-hidden p-4 border border-hr-teal/10">
-            <iframe
-              src="https://book.instantroofer.com/?product=estimate&id=3c768455-7c50-4221-bdbe-3394491039af&materials=shingleAsphaltArchitect,shingleAsphaltDesigner,foreverRoof"
-              style="display:block;width:100%;height:650px;border:none;"
-              title="Instant Roof Estimate — HealthyRoof"
-              loading="lazy"
-            ></iframe>
-            <p class="text-center text-xs text-hr-text-muted mt-3">
-              Powered by <a href="https://www.instantroofer.com" target="_blank" rel="noopener noreferrer" class="text-hr-teal hover:underline">Instant Roofer</a>
-            </p>
+          <!-- Branded iframe container -->
+          <div class="rounded-2xl overflow-hidden shadow-md border border-hr-teal/15">
+
+            <!-- Teal header bar -->
+            <div class="bg-hr-teal px-5 py-3.5 flex items-center justify-between">
+              <div class="flex items-center gap-2.5">
+                <img src="/images/hr-logo-yellow.png" alt="HealthyRoof" class="h-5 w-auto" />
+                <span class="font-futura text-sm font-semibold text-white tracking-wide">Instant Roof Estimate</span>
+              </div>
+              <span class="text-[10px] font-semibold uppercase tracking-widest text-white/60">Powered by Instant Roofer</span>
+            </div>
+
+            <!-- Spacer — gives iframe header breathing room (shown after load) -->
+            <div id="iframe-top-spacer" style="display:none;background:#e0fbf8;height:20px;"></div>
+
+            <!-- Loading skeleton (hidden once iframe loads) -->
+            <div id="iframe-skeleton" class="bg-white px-6 py-8 space-y-4">
+              <div class="h-4 bg-hr-stone rounded-full w-3/4 animate-pulse"></div>
+              <div class="h-4 bg-hr-stone rounded-full w-1/2 animate-pulse"></div>
+              <div class="h-32 bg-hr-stone rounded-xl animate-pulse mt-6"></div>
+              <div class="h-4 bg-hr-stone rounded-full w-2/3 animate-pulse"></div>
+              <div class="h-4 bg-hr-stone rounded-full w-1/3 animate-pulse"></div>
+            </div>
+
+            <!-- The iframe itself (wrapped with left spacer) -->
+            <div id="instant-roofer-wrap" style="display:none;background:#e0fbf8;">
+              <div style="display:flex;">
+                <div style="width:20px;background:#e0fbf8;flex-shrink:0;"></div>
+                <iframe
+                  id="instant-roofer-iframe"
+                  src="https://book.instantroofer.com/?product=estimate&id=3c768455-7c50-4221-bdbe-3394491039af&materials=shingleAsphaltArchitect,shingleAsphaltDesigner,foreverRoof"
+                  style="display:block;width:100%;height:650px;border:none;"
+                  title="Instant Roof Estimate — HealthyRoof"
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+
+            <!-- Footer strip -->
+            <div class="bg-hr-cream px-5 py-3 flex items-center justify-between border-t border-hr-stone">
+              <p class="text-[11px] text-hr-text-muted">
+                Questions? Call or text
+                <a href="tel:6162851025" class="text-hr-teal font-semibold hover:underline">616.285.1025</a>
+              </p>
+              <p class="text-[11px] text-hr-text-muted">No obligation estimate</p>
+            </div>
           </div>
         </div>
 
@@ -225,4 +261,20 @@ import Layout from '../layouts/Layout.astro';
       { threshold: 0.12 }
     ).observe(el);
   });
+
+  // Show iframe wrapper, hide skeleton once loaded
+  const iframe = document.getElementById('instant-roofer-iframe') as HTMLIFrameElement | null;
+  const wrap = document.getElementById('instant-roofer-wrap');
+  const skeleton = document.getElementById('iframe-skeleton');
+  const topSpacer = document.getElementById('iframe-top-spacer');
+  function showIframe() {
+    if (skeleton) skeleton.style.display = 'none';
+    if (topSpacer) topSpacer.style.display = 'block';
+    if (wrap) wrap.style.display = 'block';
+  }
+  if (iframe) {
+    iframe.addEventListener('load', showIframe);
+    // Fallback: show after 8s regardless
+    setTimeout(showIframe, 8000);
+  }
 </script>
