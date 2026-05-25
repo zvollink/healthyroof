@@ -100,12 +100,12 @@ export default function Nav({ currentPath = "/" }: { currentPath?: string }) {
           <a href="/" className="flex items-center gap-3 shrink-0">
             <img
               src="/images/hr-logo-turquoise.png"
-              alt="HealthyRoof house icon"
+              alt="Healthy Roof house icon"
               className="h-9 w-auto"
             />
             <div className="flex flex-col leading-none">
               <span className="font-futura text-lg font-semibold text-hr-teal tracking-tight">
-                HealthyRoof
+                Healthy Roof
               </span>
               <span className="font-futura text-[10px] font-semibold text-hr-text-muted tracking-widest">
                 Here, roofs last longer.

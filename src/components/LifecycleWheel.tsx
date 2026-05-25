@@ -139,6 +139,11 @@ export default function LifecycleWheel() {
     <div className="lc-wrap">
       {/* Wheel */}
       <div className="lc-wheel">
+        {/* Title lockup */}
+        <div style={{ lineHeight: 1 }}>
+          <div className="lc-title-small">Healthy Roof</div>
+          <div className="lc-title-large">Lifecycle</div>
+        </div>
         <svg viewBox="0 0 400 400" width="400" height="400" aria-label="Healthy Roof Lifecycle diagram">
           {phases.map((phase, i) => {
             const startDeg = START_OFFSET + i * (SEG_DEG + GAP_DEG);
@@ -221,13 +226,35 @@ export default function LifecycleWheel() {
           </div>
         ) : (
           <div className="lc-empty">
-            <img src="/images/hr-logo-turquoise.png" alt="HealthyRoof" width="64" height="64" style={{ objectFit: "contain" }} />
+            <img src="/images/hr-logo-turquoise.png" alt="Healthy Roof" width="64" height="64" style={{ objectFit: "contain" }} />
             <p>Select a phase to explore the Healthy Roof Lifecycle.</p>
           </div>
         )}
       </div>
 
       <style>{`
+        .lc-title-small {
+          text-align: center;
+          margin-bottom: -14px;
+          margin-left: 23px;
+          font-size: 1rem;
+          font-weight: 600;
+          color: #148888;
+          letter-spacing: 0.02em;
+          line-height: 1;
+        }
+        .lc-title-large {
+          font-size: 3rem;
+          font-weight: 700;
+          color: #148888;
+          letter-spacing: -0.02em;
+          line-height: 1;
+          text-align: center;
+        }
+        @media (min-width: 640px) {
+          .lc-title-small { font-size: 1.25rem; margin-left: 35px; }
+          .lc-title-large { font-size: 4rem; }
+        }
         .lc-wrap {
           display: flex;
           align-items: center;
