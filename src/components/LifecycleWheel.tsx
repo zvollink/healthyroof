@@ -157,7 +157,7 @@ export default function LifecycleWheel() {
       {/* Wheel */}
       <div className="lc-wheel">
         {/* Title lockup */}
-        <div style={{ lineHeight: 1 }}>
+        <div style={{ lineHeight: 1, marginBottom: -10}}>
           <div className="lc-title-small">Healthy Roof</div>
           <div className="lc-title-large">Lifecycle</div>
         </div>
@@ -252,24 +252,26 @@ export default function LifecycleWheel() {
       <style>{`
         .lc-title-small {
           text-align: center;
-          margin-bottom: -14px;
-          margin-left: 23px;
-          font-size: 1rem;
-          font-weight: 600;
+          margin-bottom: -15px;
+          margin-left: 15px;
+          font-size: .85rem;
+          font-family: "futura-100", sans-serif;
+          font-weight: 500;
           color: #148888;
           letter-spacing: 0.02em;
           line-height: 1;
         }
         .lc-title-large {
           font-size: 3rem;
-          font-weight: 700;
+          font-family: "futura-100", sans-serif;
+          font-weight: 500;
           color: #148888;
           letter-spacing: -0.02em;
           line-height: 1;
           text-align: center;
         }
         @media (min-width: 640px) {
-          .lc-title-small { font-size: 1.25rem; margin-left: 35px; }
+          .lc-title-small { font-size: 1.15rem; margin-left: 21px; margin-bottom: -19px; }
           .lc-title-large { font-size: 4rem; }
         }
         .lc-wrap {

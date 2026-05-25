@@ -103,8 +103,8 @@ export default function Nav({ currentPath = "/" }: { currentPath?: string }) {
               alt="Healthy Roof house icon"
               className="h-9 w-auto"
             />
-            <div className="flex flex-col leading-none">
-              <span className="font-futura text-lg font-semibold text-hr-teal tracking-tight">
+            <div className="flex xl:flex lg:hidden flex-col leading-none">
+              <span className="text-lg text-hr-teal tracking-tight" style={{ fontFamily: '"futura-100", sans-serif', fontWeight: 500 }}>
                 Healthy Roof
               </span>
               <span className="font-futura text-[10px] font-semibold text-hr-text-muted tracking-widest">
