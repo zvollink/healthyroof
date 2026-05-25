@@ -1,7 +1,7 @@
-# HealthyRoof — Project Context for Claude Code
+# Healthy Roof — Project Context for Claude Code
 
 ## Project Overview
-Marketing website for **HealthyRoof**, a locally owned roofing company in Grand Rapids, MI.
+Marketing website for **Healthy Roof**, a locally owned roofing company in Grand Rapids, MI.
 Owners: Chris and Liz Owen. Built by Zach Vollink (Two Rivers Digital).
 
 Live staging: https://healthyroof.vercel.app/

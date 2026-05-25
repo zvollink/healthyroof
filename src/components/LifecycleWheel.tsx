@@ -86,9 +86,10 @@ const phases: Phase[] = [
 // --- SVG Math ---
 const CX = 200;
 const CY = 200;
-const OUTER_R = 170;
-const INNER_R = 88;
-const GAP_DEG = 6;
+const OUTER_R = 148;
+const INNER_R = 95;
+const LOGO_R = 83; // white circle / logo size — decoupled from INNER_R
+const GAP_DEG = 3;
 const SEG_DEG = 360 / phases.length - GAP_DEG; // ~66° each
 const START_OFFSET = -90; // start from top
 
@@ -104,7 +105,8 @@ const polarToXY = (
   y: Math.round((cy + r * Math.sin(toRad(angleDeg))) * 1000) / 1000,
 });
 
-const donutPath = (
+// Arrow segment: chevron point on leading edge, V-notch on trailing edge
+const arrowSegmentPath = (
   cx: number,
   cy: number,
   outerR: number,
@@ -112,16 +114,31 @@ const donutPath = (
   startDeg: number,
   endDeg: number
 ): string => {
-  const o1 = polarToXY(cx, cy, outerR, startDeg);
-  const o2 = polarToXY(cx, cy, outerR, endDeg);
-  const i1 = polarToXY(cx, cy, innerR, endDeg);
-  const i2 = polarToXY(cx, cy, innerR, startDeg);
+  const midR = (outerR + innerR) / 2;
+  const depth = 17; // degrees — controls sharpness of both notch and point
+
+  const overlapDeg = 3; // how far tips extend into the gap on both ends
+
+  // Trailing edge (start): notch bites inward, tip extends back past startDeg into the gap
+  const trailTip = polarToXY(cx, cy, midR, startDeg + depth - 10);
+  const o1 = polarToXY(cx, cy, outerR, startDeg - overlapDeg);
+  const i2 = polarToXY(cx, cy, innerR, startDeg - overlapDeg);
+
+  // Leading edge (end): point extends past endDeg into the gap
+  const leadTip = polarToXY(cx, cy, midR, endDeg + overlapDeg);
+  const o2 = polarToXY(cx, cy, outerR, endDeg - depth + 10);
+  const i1 = polarToXY(cx, cy, innerR, endDeg - depth + 7);
+
   const large = endDeg - startDeg > 180 ? 1 : 0;
+
   return [
-    `M${o1.x},${o1.y}`,
-    `A${outerR},${outerR} 0 ${large} 1 ${o2.x},${o2.y}`,
-    `L${i1.x},${i1.y}`,
-    `A${innerR},${innerR} 0 ${large} 0 ${i2.x},${i2.y}`,
+    `M${o1.x},${o1.y}`,                    // outer trailing edge
+    `L${trailTip.x},${trailTip.y}`,        // inward notch tip
+    `L${i2.x},${i2.y}`,                    // inner trailing edge
+    `A${innerR},${innerR} 0 ${large} 1 ${i1.x},${i1.y}`, // inner arc forward
+    `L${leadTip.x},${leadTip.y}`,          // leading point (inward to midR)
+    `L${o2.x},${o2.y}`,                    // back to outer arc
+    `A${outerR},${outerR} 0 ${large} 0 ${o1.x},${o1.y}`, // outer arc reverse
     "Z",
   ].join(" ");
 };
@@ -165,7 +182,7 @@ export default function LifecycleWheel() {
                 style={{ cursor: "pointer", outline: "none" }}
               >
                 <path
-                  d={donutPath(CX, CY, outerR, INNER_R, startDeg, endDeg)}
+                  d={arrowSegmentPath(CX, CY, outerR, INNER_R, startDeg, endDeg)}
                   fill={isActive ? phase.activeColor : phase.color}
                   style={{
                     transition: "all 0.22s ease",
@@ -197,13 +214,13 @@ export default function LifecycleWheel() {
 
           {/* Center logo */}
           <g transform={`translate(${CX}, ${CY})`} aria-hidden="true">
-            <circle r={INNER_R - 5} fill="white" />
+            <circle r={LOGO_R} fill="white" />
             <image
               href="/images/hr-logo-turquoise.png"
-              x={-(INNER_R - 5) * 0.5}
-              y={-(INNER_R - 5) * 0.6}
-              width={(INNER_R - 5) * 1.0}
-              height={(INNER_R - 5) * 1.0}
+              x={-LOGO_R * 0.5}
+              y={-LOGO_R * 0.6}
+              width={LOGO_R * 1.0}
+              height={LOGO_R * 1.0}
               preserveAspectRatio="xMidYMid meet"
             />
           </g>
