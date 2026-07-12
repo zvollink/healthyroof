@@ -138,7 +138,7 @@ Service Area
 - [x] Schedule — /schedule (Instant Roofer widget — pending brand color update from client)
 
 ## Pending / Outstanding
-- [ ] Instant Roofer widget colors — send #1A8A84 + #D4E233 to Instant Roofer, swap embed src when received
+- [x] Roofle widget — replaced Instant Roofer with Roofle Roof Quote PRO script embed (id=eto2wRKl4YZNBCbvWaSlL)
 - [ ] Real reviews — collect from client, populate reviews.astro + reviews page, then unhide in Nav
 - [ ] Real assets — SVG logo, hi-res photos from client
 - [ ] Color pass — bolder teal/yellow sections per Liz's feedback (do on separate branch)
@@ -147,7 +147,7 @@ Service Area
 
 ## Key Copy & CTAs
 - **Primary CTA:** "Schedule a Roof Health Assessment" → `/schedule`
-- **Phone:** 616.285.1025 (call or text)
+- **Phone:** 616-284-1925 (call or text)
 - **Email:** info@thehealthyroof.com
 - **Tagline:** "Here, roofs last longer"
 - **Sub-tagline:** "Know where your roof stands today so you can plan confidently for tomorrow."
