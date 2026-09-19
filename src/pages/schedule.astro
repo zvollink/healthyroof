@@ -44,6 +44,56 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- ── Contact Form ── -->
+  <section class="bg-hr-cream py-20 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="text-center mb-10 reveal-up">
+        <div class="flex items-center justify-center gap-3 mb-5">
+          <span class="text-xs font-semibold uppercase tracking-widest text-hr-text-primary bg-hr-yellow px-3 py-1 rounded-full">Contact Us</span>
+        </div>
+        <h2 class="font-display text-3xl sm:text-4xl font-bold text-hr-text-primary leading-[1.1] tracking-tight mb-3">
+          Tell us about your roof.
+        </h2>
+        <p class="text-sm sm:text-base text-hr-text-secondary leading-relaxed max-w-xl mx-auto">
+          Share a few details and we'll follow up to schedule your Roof Health Assessment — no pressure, no obligation.
+        </p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden shadow-md border border-hr-teal/15 bg-white reveal-up" style="transition-delay: 0.1s;">
+
+        <!-- Teal header bar -->
+        <div class="bg-hr-teal px-5 py-3.5 flex items-center gap-2.5">
+          <img src="/images/hr-logo-yellow.png" alt="Healthy Roof" class="h-5 w-auto" />
+          <span class="text-sm font-semibold text-white tracking-wide">Contact Healthy Roof</span>
+        </div>
+
+        <!-- GoHighLevel form embed -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/iZ1AGz0H1LJqo9F11KLX"
+          style="display:block;width:100%;height:100%;border:none;border-radius:4px"
+          id="inline-iZ1AGz0H1LJqo9F11KLX"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Roofing Quote - Classic"
+          data-height="1320"
+          data-layout-iframe-id="inline-iZ1AGz0H1LJqo9F11KLX"
+          data-form-id="iZ1AGz0H1LJqo9F11KLX"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="Roofing Quote - Classic"
+        ></iframe>
+      </div>
+
+    </div>
+  </section>
+  <script is:inline src="https://link.msgsndr.com/js/form_embed.js"></script>
+
   <!-- ── Main Content: Widget + What to Expect ── -->
   <section class="bg-hr-stone py-20 lg:py-28">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -210,6 +260,15 @@ import Layout from '../layouts/Layout.astro';
   .reveal-up.visible {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  /* GoHighLevel form_embed.js rewrites the iframe's own style attribute at
+     runtime, so the crop-the-gap trick has to target the wrapper div it
+     generates around the iframe instead of the iframe itself. */
+  :global(#inline-iZ1AGz0H1LJqo9F11KLX-div) {
+    margin-top: -20px;
+    position: relative;
+    z-index: -1;
   }
 </style>
 
